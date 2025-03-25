@@ -8,6 +8,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
@@ -152,27 +159,68 @@
     </div>
 
     <!-- Favorites drinks sector -->
-    <div>
-      <h1>Get your favorites for free</h1>
-      <!-- tabs bar -->
-      <div>
-        <ul>
-          <li>25</li>
-          <li>50</li>
-          <li>150</li>
-          <li>200</li>
-          <li>400</li>
-        </ul>
+    <div class="my-10">
+      <!-- first sector -->
+      <div class="bg-[#f1f8f6] pt-10 relative">
+        <h1 class="md:text-3xl text-xl text-center font-bold">
+          Get your favorites for free
+        </h1>
+        <!-- tabs bar -->
+        <div class="mt-10 relative">
+          <div
+            class="flex md:gap-4 cursor-pointer justify-center items-center font-bold text-xl pb-4"
+          >
+            <p class="tab w-24 text-center" data-tab="25">
+              25
+              <span class="text-xs text-[#CAA25C]">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="tab w-24 text-center" data-tab="50">
+              50
+              <span class="text-xs text-[#CAA25C]">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="tab w-24 text-center" data-tab="150">
+              150
+              <span class="text-xs text-[#CAA25C]">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="tab w-24 text-center" data-tab="200">
+              200
+              <span class="text-xs text-[#CAA25C]">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="tab w-24 text-center" data-tab="400">
+              400
+              <span class="text-xs text-[#CAA25C]">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+          </div>
+          <!-- Underline for active tab -->
+          <div
+            id="active-tab-line"
+            class="w-24 h-1 bg-[#00754A] absolute left-0 bottom-[-1px] transition-all"
+          ></div>
+        </div>
       </div>
       <!-- content according to the tabs -->
-      <div>
-        <div><img src="" alt="" /></div>
-        <div>
-          <h1>Customize your drink</h1>
-          <p>
-            Make your drink just right with an extra expresso shot, dairy
-            subsitute or a dash of your favorite syrup.
-          </p>
+      <div class="px-20 bg-[#d4e9e2] py-5">
+        <div class="flex max-w-3xl gap-10 items-center mx-auto">
+          <div>
+            <img src="/public/25.png" alt="drink" class="" />
+          </div>
+          <div class="text-wrap">
+            <h1 class="md:text-2xl text-xl font-bold">Customize your drink</h1>
+            <p class="pt-5 font-medium text-sm">
+              Make your drink just right with an extra expresso shot, dairy
+              subsitute or a dash of your favorite syrup.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -183,6 +231,29 @@
         .addEventListener("click", function () {
           document.getElementById("mobile-menu").classList.toggle("hidden");
         });
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab");
+        const underline = document.getElementById("active-tab-line");
+
+        function setActiveTab(tab) {
+          const tabWidth = tab.offsetWidth;
+          const tabLeft = tab.offsetLeft;
+
+          underline.style.width = `${tabWidth}px`;
+          underline.style.left = `${tabLeft}px`;
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            setActiveTab(tab);
+            tabs.forEach((item) => item.classList.remove("text-[#00754A]"));
+            tab.classList.add("text-[#00754A]");
+          });
+        });
+
+        setActiveTab(tabs[0]);
+        tabs[0].classList.add("text-[#00754A]");
+      });
     </script>
   </body>
 </html>
