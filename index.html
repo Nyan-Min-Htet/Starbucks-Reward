@@ -1,104 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starbucks Reward</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar -->
-    <nav class=" w-full bg-white shadow-md z-50">
-        <div class="flex items-center justify-between px-6 py-4 md:px-10">
-            <img src="./public/img/logo.jpeg" alt="logo" class="w-14 h-14 rounded-full">
-            <div class="hidden md:flex space-x-8 font-bold mr-auto px-10">
-                <a href="#" class="hover:text-green-600">MENU</a>
-                <a href="#" class="hover:text-green-600">REWARD</a>
-                <a href="#" class="hover:text-green-600">GIFT CARDS</a>
-            </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <p class="flex items-center"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Find a store</p>
-                <a href="#"><button class="border border-black px-6 py-2 rounded-full">Sign in</button></a>
-                <a href="#"><button class="bg-black text-white px-6 py-2 rounded-full">Join Now</button></a>
-            </div>
-            <button class="md:hidden text-2xl" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <nav class="w-full bg-white shadow-md z-50">
+      <div class="flex items-center justify-between px-6 py-4 md:px-10">
+        <img
+          src="./public/img/logo.jpeg"
+          alt="logo"
+          class="w-14 h-14 rounded-full"
+        />
+        <div class="hidden md:flex space-x-8 font-bold mr-auto px-10">
+          <a href="#" class="hover:text-green-600">MENU</a>
+          <a href="#" class="hover:text-green-600">REWARD</a>
+          <a href="#" class="hover:text-green-600">GIFT CARDS</a>
         </div>
-        <!-- Mobile Menu -->
-        <div class="hidden md:hidden flex flex-col items-center space-y-4 py-4" id="mobile-menu">
-            <a href="#" class="hover:text-green-600 font-bold">MENU</a>
-            <a href="#" class="hover:text-green-600 font-bold">REWARD</a>
-            <a href="#" class="hover:text-green-600 font-bold">GIFT CARDS</a>
-            <p class="flex items-center font-medium"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Find a store
-            </p>
-            <a href="#"><button class="border border-black px-4 py-2 rounded-full font-medium">Sign in</button></a>
-            <a href="#"><button class="bg-black text-white px-4 py-2 rounded-full font-medium">Join Now</button></a>
+        <div class="hidden md:flex items-center space-x-8">
+          <p class="flex items-center">
+            <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Find a store
+          </p>
+          <a href="#"
+            ><button class="border border-black px-6 py-2 rounded-full">
+              Sign in
+            </button></a
+          >
+          <a href="#"
+            ><button class="bg-black text-white px-6 py-2 rounded-full">
+              Join Now
+            </button></a
+          >
         </div>
+        <button class="md:hidden text-2xl" id="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="hidden md:hidden flex flex-col items-center space-y-4 py-4"
+        id="mobile-menu"
+      >
+        <a href="#" class="hover:text-green-600 font-bold">MENU</a>
+        <a href="#" class="hover:text-green-600 font-bold">REWARD</a>
+        <a href="#" class="hover:text-green-600 font-bold">GIFT CARDS</a>
+        <p class="flex items-center font-medium">
+          <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Find a store
+        </p>
+        <a href="#"
+          ><button
+            class="border border-black px-4 py-2 rounded-full font-medium"
+          >
+            Sign in
+          </button></a
+        >
+        <a href="#"
+          ><button
+            class="bg-black text-white px-4 py-2 rounded-full font-medium"
+          >
+            Join Now
+          </button></a
+        >
+      </div>
     </nav>
 
     <!-- Banner -->
     <div class="bg-black text-white text-center py-3 font-medium">
-        <h1>STARBUCKS' REWARDS</h1>
+      <h1>STARBUCKS' REWARDS</h1>
     </div>
 
     <!-- Main Content -->
-    <div class="bg-[#d4e9e2] flex flex-col-reverse md:flex-row items-center px-6 md:px-20 py-12">
-        <div class="text-center md:text-left md:w-1/2">
-            <h1 class="font-bold text-4xl md:text-5xl">It's a great day for</h1>
-            <h1 class="font-bold text-4xl md:text-5xl py-4">free coffee</h1>
-            <p class="text-lg my-5">Sign up and start enjoying the perks of Starbucks Rewards.</p>
-            <a href="#"><button class="bg-green-700 text-white font-bold px-6 py-2 rounded-full mt-4">Join
-                    Now</button></a>
-            <p class="py-5">It's even better <a href="#" class="underline">with the app.</a></p>
-        </div>
-        <div class="w-full md:w-1/2 flex justify-center">
-            <img src="./public/img/content.png" alt="coffee photo" class="w-full rounded-lg shadow-xl">
-        </div>
+    <div
+      class="bg-[#d4e9e2] flex flex-col-reverse md:flex-row items-center px-6 md:px-20 py-12"
+    >
+      <div class="text-center md:text-left md:w-1/2">
+        <h1 class="font-bold text-4xl md:text-5xl">It's a great day for</h1>
+        <h1 class="font-bold text-4xl md:text-5xl py-4">free coffee</h1>
+        <p class="text-lg my-5">
+          Sign up and start enjoying the perks of Starbucks Rewards.
+        </p>
+        <a href="#"
+          ><button
+            class="bg-green-700 text-white font-bold px-6 py-2 rounded-full mt-4"
+          >
+            Join Now
+          </button></a
+        >
+        <p class="py-5">
+          It's even better <a href="#" class="underline">with the app.</a>
+        </p>
+      </div>
+      <div class="w-full md:w-1/2 flex justify-center">
+        <img
+          src="./public/img/content.png"
+          alt="coffee photo"
+          class="w-full rounded-lg shadow-xl"
+        />
+      </div>
     </div>
 
     <!-- Banner -->
     <div class="text-center mt-20">
-        <h2 class="text-2xl font-medium">Getting Started Is Easy</h2>
-        <p class="py-5">Earn stars and get rewards in a few easy steps.</p>
+      <h2 class="text-2xl font-medium">Getting Started Is Easy</h2>
+      <p class="py-5">Earn stars and get rewards in a few easy steps.</p>
     </div>
 
     <!-- Main Content -->
     <div class="px-6 md:px-20 py-5">
-        <div class="flex flex-col md:flex-row text-center md:text-left items-center gap-10">
-            <div class="text-center md:w-1/3 p-6 shadow-lg rounded-xl">
-                <p class="text-3xl font-bold text-green-700">1</p>
-                <h4 class="text-xl font-semibold mt-4">Create An Account</h4>
-                <p class="mt-4">To get started, <a href="#" class="text-green-600 underline">join now.</a> You can also
-                    <a href="#" class="text-green-600 underline">join in the app </a>to get access
-                    to
-                    the full range of Starbucks Rewards benefits.
-                </p>
-            </div>
-            <div class="text-center md:w-1/3 p-6 shadow-lg rounded-xl">
-                <p class="text-3xl font-bold text-green-700">2</p>
-                <h4 class="text-xl font-semibold mt-4">Order and pay how you'd like</h4>
-                <p class="mt-4">Use cash, credit/debit card or save some time and pay right through the app. You'll
-                    collect stars all
-                    ways. <a href="#" class="text-green-600 underline">Learn how.</a></p>
-            </div>
-            <div class="text-center md:w-1/3 p-6 shadow-lg rounded-xl">
-                <p class="text-3xl font-bold text-green-700">3</p>
-                <h4 class="text-xl font-semibold mt-4">Earn Stars, get Rewards</h4>
-                <p class="mt-4">Are you earn Stars, you can redeem them for Rewards - like free foods, drinks, and more.
-                    Start
-                    Redeeming
-                    with as little as 25 stars!</p>
-            </div>
+      <div
+        class="flex flex-col md:flex-row text-center md:text-left items-center gap-10"
+      >
+        <div class="text-center md:w-1/3 p-6 shadow-lg rounded-xl">
+          <p class="text-3xl font-bold text-green-700">1</p>
+          <h4 class="text-xl font-semibold mt-4">Create An Account</h4>
+          <p class="mt-4">
+            To get started,
+            <a href="#" class="text-green-600 underline">join now.</a> You can
+            also
+            <a href="#" class="text-green-600 underline">join in the app </a>to
+            get access to the full range of Starbucks Rewards benefits.
+          </p>
         </div>
+        <div class="text-center md:w-1/3 p-6 shadow-lg rounded-xl">
+          <p class="text-3xl font-bold text-green-700">2</p>
+          <h4 class="text-xl font-semibold mt-4">
+            Order and pay how you'd like
+          </h4>
+          <p class="mt-4">
+            Use cash, credit/debit card or save some time and pay right through
+            the app. You'll collect stars all ways.
+            <a href="#" class="text-green-600 underline">Learn how.</a>
+          </p>
+        </div>
+        <div class="text-center md:w-1/3 p-6 shadow-lg rounded-xl">
+          <p class="text-3xl font-bold text-green-700">3</p>
+          <h4 class="text-xl font-semibold mt-4">Earn Stars, get Rewards</h4>
+          <p class="mt-4">
+            Are you earn Stars, you can redeem them for Rewards - like free
+            foods, drinks, and more. Start Redeeming with as little as 25 stars!
+          </p>
+        </div>
+      </div>
     </div>
 
-    <script>
-        document.getElementById("menu-toggle").addEventListener("click", function () {
-            document.getElementById("mobile-menu").classList.toggle("hidden");
-        });
-    </script>
-</body>
+    <!-- Favorites drinks sector start -->
+    <div class="mt-10">
+      <!-- first sector -->
+      <div class="bg-[#f1f8f6] pt-10 relative">
+        <h1 class="md:text-3xl text-xl text-center font-bold">
+          Get your favorites for free
+        </h1>
+        <!-- tabs bar -->
+        <div class="mt-10 relative">
+          <div
+            class="flex md:gap-4 cursor-pointer justify-center items-center font-bold text-xl pb-4"
+          >
+            <p class="tab w-24 text-center" data-tab="25">
+              25
+              <span class="text-xs text-[#CAA25C]">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="tab w-24 text-center" data-tab="50">
+              50
+              <span class="text-xs text-[#CAA25C]">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="tab w-24 text-center" data-tab="150">
+              150
+              <span class="text-xs text-[#CAA25C]">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="tab w-24 text-center" data-tab="200">
+              200
+              <span class="text-xs text-[#CAA25C]">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+            <p class="tab w-24 text-center" data-tab="400">
+              400
+              <span class="text-xs text-[#CAA25C]">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </p>
+          </div>
+          <!-- Underline for active tab -->
+          <div
+            id="active-tab-line"
+            class="w-24 h-1 bg-[#00754A] absolute left-0 bottom-[-1px] transition-all"
+          ></div>
+        </div>
+      </div>
+      <!-- content according to the tabs -->
+      <div class="px-20 bg-[#d4e9e2] py-5">
+        <div class="flex max-w-3xl gap-10 items-center mx-auto">
+          <div>
+            <img src="/public/25.png" alt="drink" class="" />
+          </div>
+          <div class="text-wrap">
+            <h1 class="md:text-2xl text-xl font-bold">Customize your drink</h1>
+            <p class="pt-5 font-medium text-sm">
+              Make your drink just right with an extra expresso shot, dairy
+              subsitute or a dash of your favorite syrup.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Favorites drinks sector end-->
 
+    <!-- Endless Extras sector start -->
+    <div class="mt-10">
+      <div class="text-wrap max-w-[38rem] mx-auto text-center">
+        <h1 class="md:text-2xl text-xl font-bold">Endless Extras</h1>
+        <p class="pt-5 font-medium text-sm">
+          Joining Starbucks® Rewards means unlocking access to benefits like
+          quick and easy ordering, tasty Rewards and—yes, free coffee.
+        </p>
+      </div>
+
+      <!-- cards -->
+      <div class="flex px-10 py-10 justify-center gap-10">
+        <div class="text-center">
+          <div class="flex items-center justify-center">
+            <img src="/public/card1.jpg" alt="" class="w-[130px]" />
+          </div>
+          <h2 class="font-bold text-lg pb-4 pt-5">Fun freebies</h2>
+          <p class="pb-3 max-w-[24rem]">
+            Not only can you earn free food, drinks and more, look forward to a
+            birthday treat on us.
+          </p>
+          <a href="#learnmore" class="text-[#008248] underline font-bold"
+            >Learn more</a
+          >
+        </div>
+        <div class="text-center">
+          <div class="flex items-center justify-center">
+            <img src="/public/payment.jpg" alt="" class="w-[130px]" />
+          </div>
+          <h2 class="font-bold text-lg pb-4 pt-5">Order & pay ahead</h2>
+          <p class="pb-3 max-w-[24rem]">
+            Master the art of ordering ahead with saved favorites and payment
+            methods.
+          </p>
+          <a href="#learnmore" class="text-[#008248] underline font-bold"
+            >Learn more</a
+          >
+        </div>
+        <div class="text-center">
+          <div class="flex items-center justify-center">
+            <img src="/public/order.jpg" alt="" class="w-[130px]" />
+          </div>
+          <h2 class="font-bold text-lg pb-4 pt-5">Get to free faster</h2>
+          <p class="pb-3 max-w-[24rem]">
+            Earn Stars even quicker with Bonus Star challenges, Double Star Days
+            and exciting games.
+          </p>
+          <a href="#learnmore" class="text-[#008248] underline font-bold"
+            >Learn more</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Endless Extras sector end -->
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab");
+        const underline = document.getElementById("active-tab-line");
+
+        function setActiveTab(tab) {
+          const tabWidth = tab.offsetWidth;
+          const tabLeft = tab.offsetLeft;
+
+          underline.style.width = `${tabWidth}px`;
+          underline.style.left = `${tabLeft}px`;
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            setActiveTab(tab);
+            tabs.forEach((item) => item.classList.remove("text-[#00754A]"));
+            tab.classList.add("text-[#00754A]");
+          });
+        });
+
+        setActiveTab(tabs[0]);
+        tabs[0].classList.add("text-[#00754A]");
+      });
+    </script>
+  </body>
 </html>
